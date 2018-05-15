@@ -5,6 +5,7 @@ test ! -d "$APP_HOME" && echo "INFO: $APP_HOME not found. creating..." && mkdir 
 if find "$1" -mindepth 1 -print -quit | grep -q .; then
     echo "Application in directory"
 else
+    echo "Installing React in $APP_HOME..."
     npx create-react-app "$APP_HOME"
 fi
 
